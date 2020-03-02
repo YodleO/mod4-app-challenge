@@ -1,17 +1,13 @@
-function billTotal(){
-    const bill_total = document.getElementById("bill_total"); 
-    const tip_percentage = document.getElementById("tip_percentage");
-    const calculate_btn = document.getElementById("calculate_btn");
-    const grand_total = document.getElementById("grand_total");
+function kToC(){
+    const degK = document.getElementById("degK"); 
+   
+    degK1 = Number(degK.value);
 
-    bill_total1 = Number(bill_total.value);
+    let celcius = degK1 - 273.15;
 
-    let tax = bill_total1 * 0.055;
-    let taxed_Total = bill_total1 +tax;
-    let tip_Amount = bill_total1 * tip_percentage.value/100;
-    let end_Total = (taxed_Total + tip_Amount);
+    celcius = round(celcius,2)
 
-    grand_total.innerHTML = `Grand Total: $${end_Total}`;
+    c_degrees.innerHTML = `Degrees in Celcius: ${celcius}`;
 }
 
 function round(value, decimals) {
